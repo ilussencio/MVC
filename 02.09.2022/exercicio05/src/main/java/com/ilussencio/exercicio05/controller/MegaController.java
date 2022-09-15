@@ -14,15 +14,23 @@ public class MegaController {
     @RequestMapping("mega")
     public String requestMethodName(Model modelo) {
         Random random = new Random();
+        
         List<Integer> array = new ArrayList<>();
         for(int i = 1; i <= 60; i ++)
             array.add(i);
-        modelo.addAttribute("numero1",array.remove(random.nextInt(0,array.size())));
-        modelo.addAttribute("numero2",array.remove(random.nextInt(0,array.size())));
-        modelo.addAttribute("numero3",array.remove(random.nextInt(0,array.size())));
-        modelo.addAttribute("numero4",array.remove(random.nextInt(0,array.size())));
-        modelo.addAttribute("numero5",array.remove(random.nextInt(0,array.size())));
-        modelo.addAttribute("numero6",array.remove(random.nextInt(0,array.size())));
+        
+            List<Integer> lista = new ArrayList<>();
+        for(int i = 0; i < 6; i ++){
+            lista.add(array.remove(random.nextInt(0,array.size())));    
+        }
+        
+        modelo.addAttribute("num", lista)
+        // modelo.addAttribute("numero1",array.remove(random.nextInt(0,array.size())));
+        // modelo.addAttribute("numero2",array.remove(random.nextInt(0,array.size())));
+        // modelo.addAttribute("numero3",array.remove(random.nextInt(0,array.size())));
+        // modelo.addAttribute("numero4",array.remove(random.nextInt(0,array.size())));
+        // modelo.addAttribute("numero5",array.remove(random.nextInt(0,array.size())));
+        // modelo.addAttribute("numero6",array.remove(random.nextInt(0,array.size())));
         return "megasena";
     }
     

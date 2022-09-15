@@ -14,6 +14,8 @@
     <p><b>Numero 04:</b> <label th:text="${numero4}"></label></p>
     <p><b>Numero 05:</b> <label th:text="${numero5}"></label></p>
     <p><b>Numero 06:</b> <label th:text="${numero6}"></label></p>
+
+    <li th:each=" numero : ${dados}" th:text="${numero}"></li>
     
 </body>
 </html>

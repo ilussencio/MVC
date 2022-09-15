@@ -1,10 +1,10 @@
-package com.ilussencio.ordersystem;
+package com.ilussencio.aulabootstrap;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OrdersystemApplicationTests {
+class AulabootstrapApplicationTests {
 
 	@Test
 	void contextLoads() {
