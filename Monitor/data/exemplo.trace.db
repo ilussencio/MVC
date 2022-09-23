@@ -1,0 +1,9 @@
+2022-09-20 19:57:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MONITO" not found; SQL statement:
+select * from MONITO [42102-214]
+2022-09-20 19:57:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MONITO" not found; SQL statement:
+select * from MONITO [42102-214]
+2022-09-20 19:57:35 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MONITO" not found; SQL statement:
+select * from MONITO [42102-214]

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html th:fragment="modelo">
+
+<head> … </head>
+<body class="d-flex flex-column min-vh-100">
+	<!-- Início do conteúdo da página -->
+	<nav th:replace="fragments/barranavegacao :: navbar">	</nav>
+
+	<main th:replace="this :: conteudo"></main>
+
+	<footer th:replace="fragments/footer :: rodape" 
+class="mt-auto mx-auto my-3"></footer>
+
+</body></html>
