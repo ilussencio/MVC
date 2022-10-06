@@ -13,18 +13,8 @@ import java.util.List;
 public class HomeController {
     @Autowired
     JdbcTemplate jdbcTemplate;
-
-
-
-
     @GetMapping
     public String principal(){
-        jdbcTemplate.execute("DROP TABLE contatos IF EXISTS");
-        jdbcTemplate.execute("CREATE TABLE contatos(id SERIAL, nome VARCHAR(255), telefone VARCHAR(255) )");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "Edson Angoti Júnior", "123456");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "José Joaquim", "123");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)", "Maria Carolina", "123");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone) VALUES (?,?)","Lucas Ilussencio da Silva", "12345");
         return "home";
     }
 
