@@ -43,7 +43,12 @@ public class HomeController {
 
     @PostMapping("/novo")
     public String gravaDados(Contato contato){
-        System.out.println(contato);
+        System.out.println(contato.getNome());
+        jdbcTemplate.update(
+                "INSERT INTO contatos(nome,telefone, endereco) VALUES (?,?,?)",
+                contato.getNome(),
+                contato.getTelefone(),
+                contato.getEndereco());
         return "home";
     }
 }
