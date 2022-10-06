@@ -6,7 +6,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import java.util.List;
 
 @Controller
@@ -20,10 +19,22 @@ public class HomeController {
 
     @GetMapping("/contatos")
     public String contatos(Model model){
-        List<Contato> listaDeContatos = jdbcTemplate.query("SELECT id, nome, telefone FROM contatos", (rs, rowNum) -> {
-            return new Contato(rs.getLong("id"), rs.getString("nome"), rs.getString("telefone"));
-        });
+        List <Contato> listaDeContatos = jdbcTemplate.query(
+                "select * from contatoS",
+                (res, rowNum) -> {
+                    Contato contato = new Contato(
+                        res.getInt("id"),
+                        res.getString("nome"),
+                        res.getString("telefone"),
+                        res.getString("endereco"));
+                    return contato;
+                });
         model.addAttribute("contatos", listaDeContatos);
         return "contatos";
+    }
+
+    @GetMapping("/novo")
+    public String exibeForm(){
+        return "formulario";
     }
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html th:include="template :: modelo">
+    <body>
+        <div th:fragment="conteudo">
+            <form>
+                <fieldset disabled>
+                    <legend>Disabled fieldset example</legend>
+                    <div class="mb-3">
+                        <label for="disabledTextInput" class="form-label">Nome</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                    </div>
+                    <div class="mb-3">
+                        <label for="disabledSelect" class="form-label">Endereco</label>
+                        <select id="disabledSelect" class="form-select">
+                            <option>Disabled select</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="disabledSelect" class="form-label">Telefone</label>
+                        <select id="disabledSelect" class="form-select">
+                            <option>Disabled select</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

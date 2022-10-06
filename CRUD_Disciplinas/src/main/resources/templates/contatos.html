@@ -5,16 +5,18 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
+            <th scope="col">ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">TELEFONE</th>
+            <th scop="col">ENDERECO</th>
         </tr>
         </thead>
         <tbody>
             <tr th:each="contato:${contatos}">
-                <th scope="row" th:text="${contato.id}"></th>
+                <td th:text="${contato.id}"></td>
                 <td th:text="${contato.nome}"></td>
                 <td th:text="${contato.telefone}"></td>
+                <td th:text="${contato.endereco}"></td>
             </tr>
         </tbody>
     </table>
