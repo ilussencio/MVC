@@ -1,8 +1,10 @@
 package br.com.ilussencio.crud_disciplinas.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Contato {
     int id;
     String nome, telefone, endereco;

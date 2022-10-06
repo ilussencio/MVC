@@ -2,26 +2,24 @@
 <html th:include="template :: modelo">
     <body>
         <div th:fragment="conteudo">
-            <form>
-                <fieldset disabled>
-                    <legend>Disabled fieldset example</legend>
+            <form action="/novo" method="post" th:object="${contato}">
+                <fieldset>
+                    <legend>FORMULARIO PARA ADICIONAR</legend>
                     <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">Nome</label>
-                        <input type="text" id="disabledTextInput" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Endereco</label>
-                        <select id="disabledSelect" class="form-select">
-                            <option>Disabled select</option>
-                        </select>
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" th:field="*{nome}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Telefone</label>
-                        <select id="disabledSelect" class="form-select">
-                            <option>Disabled select</option>
-                        </select>
+                        <label class="form-label">Telefone</label>
+                        <input type="text" class="form-control" th:field="*{telefone}">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Endereço</label>
+                        <input type="text" class="form-control" th:field="*{endereco}">
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </fieldset>
             </form>
