@@ -17,11 +17,5 @@ public class CrudDisciplinasApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         jdbcTemplate.execute("DROP TABLE contatos IF EXISTS");
         jdbcTemplate.execute("CREATE TABLE contatos(id SERIAL, nome VARCHAR(50), telefone VARCHAR(50), endereco VARCHAR(50) )");
-
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone, endereco) VALUES (?,?,?)", "Edson Angoti Júnior", "123456","RUA 1");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone, endereco) VALUES (?,?,?)", "José Joaquim", "123","RUA 1");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone, endereco) VALUES (?,?,?)", "Maria Carolina", "123","RUA 1");
-        jdbcTemplate.update("INSERT INTO contatos(nome,telefone, endereco) VALUES (?,?,?)","Lucas Ilussencio da Silva", "12345","RUA 1");
-
     }
 }

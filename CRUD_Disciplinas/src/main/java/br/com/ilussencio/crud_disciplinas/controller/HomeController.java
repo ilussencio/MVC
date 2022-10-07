@@ -22,7 +22,7 @@ public class HomeController {
     @GetMapping("/contatos")
     public String contatos(Model model){
         List <Contato> listaDeContatos = jdbcTemplate.query(
-                "select * from contatoS",
+                "select * from contatos",
                 (res, rowNum) -> {
                     Contato contato = new Contato(
                         res.getInt("id"),

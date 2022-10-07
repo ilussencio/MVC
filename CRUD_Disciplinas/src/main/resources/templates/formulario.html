@@ -4,7 +4,7 @@
         <div th:fragment="conteudo">
             <form action="/novo" method="post" th:object="${contato}">
                 <fieldset>
-                    <legend>FORMULARIO PARA ADICIONAR</legend>
+                    <legend>FORMULARIO PARA ADICIONAR CONTATO</legend>
                     <div class="mb-3">
                         <label class="form-label">Nome</label>
                         <input type="text" class="form-control" th:field="*{nome}">
@@ -20,7 +20,7 @@
                         <input type="text" class="form-control" th:field="*{endereco}">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </fieldset>
             </form>
         </div>
