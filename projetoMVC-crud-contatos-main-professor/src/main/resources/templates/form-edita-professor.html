@@ -1,0 +1,15 @@
+<html th:include="template :: modelo">
+    <div th:fragment="conteudo">
+        <form action="/editar-professor" method="post" th:object="${professor}">
+
+            <input type="hidden" th:field="*{id}">
+
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control"  th:field="*{nome}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">ATUALIZAR</button>
+        </form>
+    </div>
+</html>
