@@ -6,10 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import sistema.model.Contato;
-
-import java.util.List;
-
 @SpringBootApplication
 public class SistemaApplication implements CommandLineRunner {
 

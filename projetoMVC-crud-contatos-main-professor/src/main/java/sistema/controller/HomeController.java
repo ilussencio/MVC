@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.RequestParam;
-import sistema.model.Contato;
 import org.springframework.web.bind.annotation.PostMapping;
 import sistema.model.Professor;
 
